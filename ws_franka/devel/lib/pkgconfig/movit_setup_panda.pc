@@ -1,0 +1,8 @@
+prefix=/home/heap/ws_franka/devel
+
+Name: movit_setup_panda
+Description: Description of movit_setup_panda
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

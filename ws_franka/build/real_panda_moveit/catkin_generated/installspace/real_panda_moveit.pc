@@ -1,0 +1,8 @@
+prefix=/home/heap/ws_franka/install
+
+Name: real_panda_moveit
+Description: Description of real_panda_moveit
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

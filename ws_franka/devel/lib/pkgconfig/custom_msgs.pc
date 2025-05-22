@@ -1,0 +1,8 @@
+prefix=/home/heap/ws_franka/devel
+
+Name: custom_msgs
+Description: Description of custom_msgs
+Version: 0.0.0
+Cflags: -I/home/heap/ws_franka/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_generation message_runtime sensor_msgs std_msgs

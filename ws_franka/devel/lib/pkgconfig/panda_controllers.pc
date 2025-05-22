@@ -1,0 +1,8 @@
+prefix=/home/heap/ws_franka/devel
+
+Name: panda_controllers
+Description: Description of panda_controllers
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

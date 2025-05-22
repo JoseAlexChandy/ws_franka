@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/heap/ws_franka/install/setup.sh

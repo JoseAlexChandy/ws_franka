@@ -1,0 +1,136 @@
+. ./launch.sh
+
+
+### move same_vit under franka_sim2real_ws
+sam_vit_h_4b8939.pth
+
+### install ros related package
+conda install -c conda-forge ros-rospy
+pip install -U rospkg
+# conda install ros-sensor-msgs
+
+
+
+conda install -c conda-forge -c robostack-staging ros-noetic-cv-bridge ros-rospy ros-sensor-msgs
+
+## create pckage under franka_sim2real_ws/src
+catkin_create_pkg custom_msgs std_msgs sensor_msgs message_generation message_runtime
+
+## under franka_sim2real_ws
+catkin_make clean
+catkin_make
+
+
+
+
+#### Roobot Server £####
+
+export ROS_MASTER_URI=http://172.22.3.6:11311
+export ROS_IP=172.22.3.6
+
+
+### GPU server ####
+export ROS_MASTER_URI=http://172.22.3.6:11311
+export ROS_IP=172.22.3.8
+
+
+
+### before use
+source devel/setup.bash
+
+
+## run following first in GPU server and wait for "Finish Init"
+python run.py
+
+
+### Then run the following in robot server, but roslaunch all the components in advance.
+python3 quasi_static_pick_and_place.py
+
+
+https://panda-ros-workshop.readthedocs.io/en/latest/index.html
+https://moveit.github.io/moveit_tutorials/doc/getting_started/getting_started.html
+https://frankaemika.github.io/docs/index.html
+
+1. follow https://moveit.github.io/moveit_tutorials/doc/getting_started/getting_started.html
+
+2. note that install `pip install empy==3.3.4`
+
+3. real robot
+source ~/ws_franka/devel/setup.sh 
+
+roslaunch franka_control franka_control.launch robot_ip:=172.22.2.4 load_gripper:=true robot:=panda      
+
+roslaunch panda_moveit_config move_group.launch                                 
+
+
+4. test simulation
+
+roslaunch franka_gazebo panda.launch
+roslaunch franka_gazebo ar.launch
+roslaunch movit_setup_panda move_group.launch
+rosrun panda_controllers move_to_marker.py
+
+
+4. test real
+
+rosrun panda_controllers go_to_goal.py
+roslaunch real_panda_moveit move_group.launch
+roslaunch real_panda_moveit ros_controllers.launch  
+roslaunch franka_control franka_control.launch robot_ip:=172.22.2.4 load_gripper:=true robot:=panda
+
+
+5. run real
+
+source ~/ws_franka/devel/setup.sh 
+
+roslaunch franka_control franka_control.launch robot_ip:=172.22.2.4 load_gripper:=true robot:=panda arm_id:=bob
+roslaunch real_panda_moveit ros_controllers.launch
+roslaunch real_panda_moveit move_group.launch 
+roscd panda_controllers/scripts 
+python3 quasi_static_pick_and_place.py
+
+
+6. Recover from ERROR
+rostopic pub -1 /franka_control/error_recovery/goal franka_msgs/ErrorRecoveryActionGoal "{}"
+
+
+
+Issues
+
+1. fix the force threshold issue by modify franka_control_node.yaml file.
+
+error messages:
+[ERROR] [1719312966.676077167]: libfranka: Move command aborted: motion aborted by reflex! ["cartesian_reflex"] control_command_success_rate: 1  
+FCI: Configured force threshold reach.
+
+
+2. It struggels to do corners-edge-inward-foldings:
+    a. grasping multiple-layers while adjusting
+    b. cannot produce effect policy for side-folding after corner folding.
+
+3. We need to work on the depth image.
+
+4. add fix position camera to record trials.
+
+5. It struggles to do double-side folding:
+    a. It produce small folding action, and the fabric flip backs to the initial state due to its stiffness
+    b. the script cannot recover from bad folding states.
+    c. It cannot tell the difference between flattened and one-side folding state.
+
+6. We have similar issue for rectangular folding:
+
+7. grasping orientation may orthogonal to the dragging direcion.
+
+8. we need a side camera for recording.
+
+
+TODO:
+
+1. Work on depth image.
+2. Work on the garpsing z.
+3. Add auto-data collect in run.py. 
+4. Train mask-depth planet-clothpick
+
+4. Integrate Foldsformer.
+5. Integrate FabricFlowNet.
+6. Integrate VCD.

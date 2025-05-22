@@ -1,0 +1,22 @@
+controller_list:
+  - name: arm_position_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - bob_joint1
+      - bob_joint2
+      - bob_joint3
+      - bob_joint4
+      - bob_joint5
+      - bob_joint6
+      - bob_joint7
+    
+  # - name: hand_controller
+  #   action_ns: gripper_action
+  #   type: GripperCommand
+  #   default: true
+  #   parallel: true
+  #   joints:
+  #     - bob_finger_joint1
+  #     - bob_finger_joint2

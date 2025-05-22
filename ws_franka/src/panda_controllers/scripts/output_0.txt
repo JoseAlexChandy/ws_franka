@@ -1,0 +1,201 @@
+img dim (480, 640)
+Going Home
+Open Gripper
+Gripper result received: success=%s True
+Going success? True
+
+################################
+cur pos [0.4502043128908456, -0.00016571651216646744, 0.6994951007038184], tar pos [0.45, 0, 0.7]
+error distance 0.0005693232992377563
+################################
+
+Home position reached !!!
+img dim (480, 640)
+!!!Pixel Pnp [  0. 560.   0.  80.]
+Starting Pick [0.77914329 0.34871447 0.11999998] and Place [ 0.77914329 -0.18133558  0.11999998]
+Open Gripper
+Gripper result received: success=%s True
+Going to Pick Position
+Execution success?  True
+
+################################
+cur pos [0.7403406405135672, 0.30768950360064823, 0.2754793558739086], tar pos [0.77914329 0.34871447 0.21999998]
+error distance 0.599323197823239
+################################
+
+Going success? False
+
+################################
+cur pos [0.7403325918228667, 0.30769614994237854, 0.27543351276312594], tar pos [0.77914329 0.34871447 0.11999998]
+error distance 0.5993551840508303
+################################
+
+Close Gripper
+Gripper result received: success=%s True
+Going success? False
+
+################################
+cur pos [0.7403339487996347, 0.30768854504563264, 0.2754258126318774], tar pos [0.77914329 0.34871447 0.21999998]
+error distance 0.5993573918432882
+################################
+
+Going to Place Position
+Execution success?  True
+
+################################
+cur pos [0.7790717939517803, -0.18082567935347138, 0.21905338166949126], tar pos [ 0.77914329 -0.18133558  0.21999998]
+error distance 0.6101604883732143
+################################
+
+Going success? True
+
+################################
+cur pos [0.7787835449889157, -0.18117607393822802, 0.11902450886179178], tar pos [ 0.77914329 -0.18133558  0.11999998]
+error distance 0.691705074816161
+################################
+
+Open Gripper
+Gripper result received: success=%s True
+Going success? True
+
+################################
+cur pos [0.7789738481895182, -0.18091658564066224, 0.2180799812920927], tar pos [ 0.77914329 -0.18133558  0.21999998]
+error distance 0.6109022083639287
+################################
+
+Going Home
+Open Gripper
+Gripper result received: success=%s True
+Going success? True
+
+################################
+cur pos [0.45021763177699764, -0.00018456551747267087, 0.6994858213111297], tar pos [0.45, 0, 0.7]
+error distance 0.0005880542021680066
+################################
+
+Home position reached !!!
+img dim (480, 640)
+!!!Pixel Pnp [  0. 560.   0.  80.]
+Starting Pick [0.77914329 0.34871447 0.11999998] and Place [ 0.77914329 -0.18133558  0.11999998]
+Open Gripper
+Gripper result received: success=%s True
+Going to Pick Position
+Execution success?  True
+
+################################
+cur pos [0.7403322706907766, 0.3077218710010494, 0.27546922999569995], tar pos [0.77914329 0.34871447 0.21999998]
+error distance 0.5993429335341268
+################################
+
+Going success? False
+
+################################
+cur pos [0.7403397587875769, 0.30769377353902444, 0.2754264751973329], tar pos [0.77914329 0.34871447 0.11999998]
+error distance 0.5993624210533004
+################################
+
+Close Gripper
+Gripper result received: success=%s True
+Going success? False
+
+################################
+cur pos [0.7403416677095332, 0.3076861711721441, 0.2754248810361027], tar pos [0.77914329 0.34871447 0.21999998]
+error distance 0.5993605722619185
+################################
+
+Going to Place Position
+Execution success?  True
+
+################################
+cur pos [0.7790641400709553, -0.180864675027177, 0.21904594764869506], tar pos [ 0.77914329 -0.18133558  0.21999998]
+error distance 0.6101737780554531
+################################
+
+Going success? True
+
+################################
+cur pos [0.7787801785654808, -0.18116927920724896, 0.1190115378437306], tar pos [ 0.77914329 -0.18133558  0.11999998]
+error distance 0.6917125896676526
+################################
+
+Open Gripper
+Gripper result received: success=%s True
+Going success? True
+
+################################
+cur pos [0.7789807860104219, -0.18090584718356428, 0.21807995307466793], tar pos [ 0.77914329 -0.18133558  0.21999998]
+error distance 0.6109027866508323
+################################
+
+Going Home
+Open Gripper
+Gripper result received: success=%s True
+Going success? True
+
+################################
+cur pos [0.4502244373444811, -0.00017576739908036713, 0.6994871156370981], tar pos [0.45, 0, 0.7]
+error distance 0.0005867850286829478
+################################
+
+Home position reached !!!
+img dim (480, 640)
+!!!Pixel Pnp [  0. 560.   0.  80.]
+Starting Pick [0.77914329 0.34871447 0.11999998] and Place [ 0.77914329 -0.18133558  0.11999998]
+Open Gripper
+Gripper result received: success=%s True
+Going to Pick Position
+Execution success?  True
+
+################################
+cur pos [0.7403512987599891, 0.3076779629114523, 0.27548455572147523], tar pos [0.77914329 0.34871447 0.21999998]
+error distance 0.5993187532389977
+################################
+
+Going success? False
+
+################################
+cur pos [0.7403376407921006, 0.3076987268906936, 0.27543452703185034], tar pos [0.77914329 0.34871447 0.11999998]
+error distance 0.5993582343036133
+################################
+
+Close Gripper
+Gripper result received: success=%s True
+Going success? False
+
+################################
+cur pos [0.7403413252434197, 0.307690066068247, 0.2754402882819616], tar pos [0.77914329 0.34871447 0.21999998]
+error distance 0.5993514917936646
+################################
+
+Going to Place Position
+Execution success?  True
+
+################################
+cur pos [0.7790795233178593, -0.18079865095511752, 0.21905127950498732], tar pos [ 0.77914329 -0.18133558  0.21999998]
+error distance 0.6101583045407887
+################################
+
+Going success? True
+
+################################
+cur pos [0.7787799274317405, -0.18117183418103272, 0.11901790331971944], tar pos [ 0.77914329 -0.18133558  0.11999998]
+error distance 0.6917077929628631
+################################
+
+Open Gripper
+Gripper result received: success=%s True
+Going success? True
+
+################################
+cur pos [0.7789834065434721, -0.18089404115362961, 0.21807651866855615], tar pos [ 0.77914329 -0.18133558  0.21999998]
+error distance 0.6109034111579807
+################################
+
+[0m[ INFO] [1718976196.763650532]: Loading robot model 'panda'...[0m
+[0m[ INFO] [1718976197.983853711]: Ready to take commands for planning group bob_arm.[0m
+[0m[ INFO] [1718976223.230281101]: ABORTED: NO_IK_SOLUTION[0m
+[0m[ INFO] [1718976225.197017794]: ABORTED: NO_IK_SOLUTION[0m
+[0m[ INFO] [1718976257.396940509]: ABORTED: NO_IK_SOLUTION[0m
+[0m[ INFO] [1718976259.396969083]: ABORTED: NO_IK_SOLUTION[0m
+[0m[ INFO] [1718976291.930235706]: ABORTED: NO_IK_SOLUTION[0m
+[0m[ INFO] [1718976293.963440736]: ABORTED: NO_IK_SOLUTION[0m
